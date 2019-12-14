@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="480.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.221" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.celestialdata.panel.fxcontrollers.SettingsView">
+   <center>
+      <VBox alignment="TOP_CENTER" spacing="10.0" BorderPane.alignment="TOP_CENTER">
+         <children>
+            <HBox alignment="TOP_CENTER">
+               <children>
+                  <HBox alignment="CENTER_LEFT">
+                     <children>
+                        <Label text="WiFi SSID:">
+                           <font>
+                              <Font name="Berlin Sans FB" size="18.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="ssidTextField" promptText="TRAC-Admin">
+                           <padding>
+                              <Insets left="4.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                        </JFXTextField>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT">
+                     <children>
+                        <Label text="WiFi Password:">
+                           <font>
+                              <Font name="Berlin Sans FB" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                        <JFXPasswordField fx:id="ssidPasswordField" promptText="**********">
+                           <padding>
+                              <Insets left="4.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                        </JFXPasswordField>
+                     </children>
+                     <padding>
+                        <Insets left="28.0" />
+                     </padding>
+                  </HBox>
+                  <JFXButton fx:id="ssidSaveButton" buttonType="RAISED" mnemonicParsing="false" onAction="#onSSIDSaveButton" style="-fx-background-color: grey;" text="Save">
+                     <font>
+                        <Font name="Berlin Sans FB" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="25.0" />
+                     </HBox.margin>
+                  </JFXButton>
+               </children>
+               <padding>
+                  <Insets top="25.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="TOP_CENTER" layoutX="35.0" layoutY="10.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT">
+                     <children>
+                        <Label text="API Server IP:">
+                           <font>
+                              <Font name="Berlin Sans FB" size="18.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="apiServerTextField" promptText="x.x.x.x">
+                           <padding>
+                              <Insets left="4.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                        </JFXTextField>
+                     </children>
+                  </HBox>
+                  <JFXButton fx:id="apiServerUpdateButton" buttonType="RAISED" mnemonicParsing="false" onAction="#onApiServerUpdateButton" style="-fx-background-color: grey;" text="Update">
+                     <font>
+                        <Font name="Berlin Sans FB" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="25.0" />
+                     </HBox.margin>
+                  </JFXButton>
+               </children>
+               <padding>
+                  <Insets top="25.0" />
+               </padding>
+            </HBox>
+         </children>
+         <padding>
+            <Insets left="25.0" right="25.0" />
+         </padding>
+        </VBox>
+   </center>
+   <bottom>
+      <VBox alignment="CENTER" spacing="25.0" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton fx:id="settingsCloseButton" buttonType="RAISED" mnemonicParsing="false" onAction="#onSettingsCloseButton" style="-fx-background-color: grey;" text="Close Settings">
+               <font>
+                  <Font name="Berlin Sans FB" size="24.0" />
+               </font>
+            </JFXButton>
+         </children>
+         <padding>
+            <Insets bottom="15.0" />
+         </padding>
+      </VBox>
+   </bottom>
+   <top>
+      <VBox alignment="TOP_CENTER" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Remote Settings">
+               <font>
+                  <Font name="Berlin Sans FB" size="64.0" />
+               </font>
+            </Label>
+         </children>
+         <padding>
+            <Insets bottom="15.0" top="25.0" />
+         </padding>
+      </VBox>
+   </top>
+</BorderPane>
